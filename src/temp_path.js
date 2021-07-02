@@ -18,11 +18,11 @@ const temp_files=function(extra_path) {
         if (process.arch === 'x64') {
             return path.join(__dirname, "../", "\\temp\\");//return windows 64bit library path
         } else {
-            console.log('Unsupported platform:', process.platform, process.arch);//show unsupported platform message
+            throw Error('Unsupported platform:', process.platform, process.arch);//show unsupported platform message
         }
 
     } else {
-        console.log('Unsupported platform:', process.platform, process.arch);//show unsupported platform message 
+        throw Error('Unsupported platform:', process.platform, process.arch);//show unsupported platform message 
     }
 };
 module.exports = temp_files
