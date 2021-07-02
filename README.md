@@ -1,9 +1,8 @@
-[![webp-converter Logo](images/nlogo.gif)](https://www.npmjs.com/package/webp-converter)
+[![promised-webp-converter Logo](images/logo.png)](https://www.npmjs.com/package/webp-converter)
 
-[webp-converter v2.3.3](https://www.npmjs.com/package/webp-converter)
+A lightweight [node.js](http://nodejs.org) production-ready promised library for converting any image to webp file format or vice-versa.
 
-A small [node.js](http://nodejs.org) library for converting any image to webp file format or converting webp image to any image file format.
-
+This library was derived from [webp-converter](https://github.com/scionoftech/webp-converter) but has added promise-based error handling and removed bad logging practices.
 
 This library uses precompiled executables of WebP(v1.1.0) for more info visit [WebP](https://developers.google.com/speed/webp)
 
@@ -16,9 +15,13 @@ For converting gif image to webp, please read this documentation [gif2webp Conve
 For creating animated webp image using webp images, please read this documentation [webpmux Muxer](https://developers.google.com/speed/webp/docs/webpmux)
 
 
-## What's New
-* Better error handling, fixes missing promise rejects. Removes console logging.
-* logging options added
+## What's New in 2.3.4
+* Better error handling. 
+* Fixes missing promise rejects. 
+* Replaces console logging with throw Error
+## Breaking changes in 2.3.4
+* Promises now work as expected, you need to add
+  a catch clause to your promises.
 
 # How to use
 

@@ -1,7 +1,7 @@
 {
-  "name": "webp-converter",
-  "version": "2.3.3",
-  "description": "A small node.js library for converting any image to webp file format or converting webp image to any image file format.",
+  "name": "promised-webp-converter",
+  "version": "2.3.4",
+  "description": "A lightweight node.js promised production-ready library for converting any image to webp file format or vice-versa. ",
   "main": "src/webpconverter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/scionoftech/webp-converter.git"
+    "url": "https://github.com/Givemeurcookies/promised-webp-converter"
   },
   "keywords": [
     "webp",
@@ -38,6 +38,6 @@
   "dependencies": {
     "uuid": "^8.3.2"
   },
-  "author": "scionoftech",
+  "author": "Givemeurcookies",
   "license": "MIT"
 }
