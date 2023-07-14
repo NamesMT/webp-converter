@@ -4,6 +4,14 @@ const uuid = require('uuid').v4;
 const temp_path = require('./temp_path.js');
 const webp=require('./webpconverter.js');
 
+const mkDirWrap = (dir) => {
+  if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  return dir
+}
+
 /**
  * @param  {string} filepath
  * @param  {string} type
@@ -46,9 +54,9 @@ module.exports.base64str2webp = (base64str,image_type,option,extra_path) => {
     // let filename = String(Math.floor(Math.random() * 10000000000) + 1)
     let filename = uuid();
 
-    let input_file_path = `${temp_path(extra_path)}${filename}.${image_type}`;
+    let input_file_path = `${mkDirWrap(temp_path(extra_path))}${filename}.${image_type}`;
 
-    let webp_image_path  = `${temp_path(extra_path)}${filename}.webp`;
+    let webp_image_path  = `${mkDirWrap(temp_path(extra_path))}${filename}.webp`;
 
     let status = base64_to_image(base64str,input_file_path)
 
@@ -80,9 +88,9 @@ module.exports.buffer2webp = (buffer,image_type,option,extra_path) => {
     // let filename = String(Math.floor(Math.random() * 10000000000) + 1)
     let filename = uuid();
 
-    let input_file_path = `${temp_path(extra_path)}${filename}.${image_type}`;
+    let input_file_path = `${mkDirWrap(temp_path(extra_path))}${filename}.${image_type}`;
 
-    let webp_image_path  = `${temp_path(extra_path)}${filename}.webp`;
+    let webp_image_path  = `${mkDirWrap(temp_path(extra_path))}${filename}.webp`;
 
     let status = base64_to_image(base64str,input_file_path)
 
