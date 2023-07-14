@@ -4,7 +4,7 @@ A lightweight [node.js](http://nodejs.org) production-ready promised library for
 
 This library was derived from [webp-converter](https://github.com/scionoftech/webp-converter) (depracated since July 2021) but has added promise-based error handling and removed bad logging practices.
 
-This library uses precompiled executables of WebP(v1.1.0) for more info visit [WebP](https://developers.google.com/speed/webp)
+This library uses precompiled executables of WebP(v1.3.1) for more info visit [WebP](https://developers.google.com/speed/webp)
 
 For converting other image formats to webp, please read this documentation  [cwebp Encoder](https://developers.google.com/speed/webp/docs/cwebp)
 
