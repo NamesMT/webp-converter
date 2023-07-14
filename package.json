@@ -1,15 +1,16 @@
 {
-  "name": "promised-webp-converter",
+  "name": "@namesmt/webp-converter",
   "version": "3.0.0",
-  "description": "A lightweight node.js promised production-ready library for converting any image to webp file format or vice-versa. ",
+  "description": "Personal fork to use in lambda environment",
   "main": "src/webpconverter.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Givemeurcookies/promised-webp-converter"
+    "url": "https://github.com/NamesMT/webp-converter"
   },
   "keywords": [
     "webp",
@@ -35,7 +36,7 @@
     "images/",
     "temp/"
   ],
-  "author": "Givemeurcookies",
+  "author": "NamesMT",
   "license": "MIT",
   "dependencies": {
     "ulid": "^2.3.0"
