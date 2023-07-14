@@ -1,6 +1,6 @@
 const Buffer = require('buffer').Buffer;
 const fs = require('fs');
-const uuid = require('uuid').v4;
+const ULID = require('ulid')
 const temp_path = require('./temp_path.js');
 const webp=require('./webpconverter.js');
 
@@ -52,7 +52,7 @@ const base64_to_image = (base64str,path) =>{
 module.exports.base64str2webp = (base64str,image_type,option,extra_path) => {
 
     // let filename = String(Math.floor(Math.random() * 10000000000) + 1)
-    let filename = uuid();
+    let filename = ULID.ulid();
 
     let input_file_path = `${mkDirWrap(temp_path(extra_path))}${filename}.${image_type}`;
 
@@ -67,7 +67,7 @@ module.exports.base64str2webp = (base64str,image_type,option,extra_path) => {
 
           fs.unlinkSync(input_file_path);
           fs.unlinkSync(webp_image_path);
-  
+
           return webp_base64str
       });
       } else {
@@ -86,7 +86,7 @@ module.exports.buffer2webp = (buffer,image_type,option,extra_path) => {
     let base64str = buf.toString('base64');
 
     // let filename = String(Math.floor(Math.random() * 10000000000) + 1)
-    let filename = uuid();
+    let filename = ULID.ulid();
 
     let input_file_path = `${mkDirWrap(temp_path(extra_path))}${filename}.${image_type}`;
 
@@ -107,5 +107,5 @@ module.exports.buffer2webp = (buffer,image_type,option,extra_path) => {
     } else {
       throw Error("Failed to convert buffer to webp buffer");
     }
-    
+
 }

@@ -1,6 +1,6 @@
 {
   "name": "promised-webp-converter",
-  "version": "2.3.4",
+  "version": "3.0.0",
   "description": "A lightweight node.js promised production-ready library for converting any image to webp file format or vice-versa. ",
   "main": "src/webpconverter.js",
   "scripts": {
@@ -35,9 +35,9 @@
     "images/",
     "temp/"
   ],
-  "dependencies": {
-    "uuid": "^8.3.2"
-  },
   "author": "Givemeurcookies",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ulid": "^2.3.0"
+  }
 }
